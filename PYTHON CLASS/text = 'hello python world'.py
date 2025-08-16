@@ -1,0 +1,30 @@
+text = 'hello python world'
+modified = text.replace(' ', '_')
+splitted = modified.split('_')
+print(modified)
+print(splitted)product_code = 'SKU-12345-XYZ'
+first_dash = product_code.find('-')
+dash_count = product_code.count('-')
+numeric_part = product_code.replace('SKU-', '').replace('-XYZ', '')
+print(first_dash)
+print(dash_count)
+print(numeric_part)
+text_1 = 'hello world'
+print(text_1.title())
+text_2 = 'python programming'
+print(text_2.capitalize())
+text1 = 'learning PYTHON is AWESOME'
+result = text1.title().swapcase()
+print(result)
+text2 = 'HelloWorld123'
+print(text2.isalnum())
+print(text2.isalpha())text3 = 'helloworld'
+print(text3.isdigit())
+print(text3.islower())
+text4 = 'Hi We Are Learning Python'
+print(text4.isupper())
+print(text4.istitle())
+text5 = 'data_report_2023.csv'
+print(text5.startswith('data'))
+print(text5.endswith('.csv'))fruit = 'banana bandana banana'
+print(fruit.count('banana'))
