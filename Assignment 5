@@ -1,0 +1,105 @@
+Q1
+python - <<EOF
+from pprint import pprint
+
+products = {
+    101: {"name": "Laptop", "category": "Electronics", "price": 1200, "stock": 50},
+    102: {"name": "Shirt", "category": "Apparel", "price": 25, "stock": 200},
+    103: {"name": "Coffee Maker", "category": "Home Appliances", "price": 80, "stock": 30}
+}
+products[102]["stock"] += 50
+products[104] = {"name": "Smartphone", "category": "Electronics", "price": 700, "stock": 100}
+pprint(products)
+EOF
+Q2
+python - <<EOF
+shopping_list = ["apple", "banana", "apple", "orange", "banana", "grape"]
+shopping_list = list(set(shopping_list))
+print(shopping_list)
+EOF
+Q3
+python - <<EOF
+course_a = {"John", "Alice", "Bob", "David"}
+course_b = {"Alice", "Eve", "Charlie", "David"}
+only_a = course_a.difference(course_b)
+only_one = course_a.symmetric_difference(course_b)
+print("Students in Course A but not in Course B:", only_a)
+print("Students only in one of the two courses:", only_one)
+EOF
+Q4
+python - <<EOF
+title = input("Enter the title of the book: ")
+author = input("Enter the author's name: ")
+year = input("Enter the year of publication: ")
+price = input("Enter the price of the book: ")
+book = (title, author, year, price)
+print("\n--- Book Details ---")
+print(f"Title: {book[0]}")
+print(f"Author: {book[1]}")
+print(f"Year of Publication: {book[2]}")
+print(f"Price: {book[3]}")
+EOF
+Q5
+python - <<EOF
+subjects = ["math", "science", "english", "history", "art", "computer"]
+subject = input("Enter the subject you are interested in: ").lower()
+if subject in subjects:
+    print(f"{subject} is available.")
+else:
+    print(f"{subject} is not available.")
+EOF
+Q6
+python - <<EOF
+num = int(input("Enter a number: "))
+if num > 0:
+    print("The number is Positive")
+elif num < 0:
+    print("The number is Negative")
+else:
+    print("The number is Zero")
+EOF
+Q7
+python - <<EOF
+correct_username = "admin"
+correct_password = "admin@123"
+username = input("Enter username: ")
+password = input("Enter password: ")
+if username == correct_username and password == correct_password:
+    print("Login Successful")
+elif username != correct_username and password == correct_password:
+    print("Invalid Username")
+elif username == correct_username and password != correct_password:
+    print("Invalid Password")
+else:
+    print("Invalid Username and Password")
+EOF
+Q8
+python - <<EOF
+student_details = {
+    "Ali": {"age": 20, "grade": "A", "city": "Karachi"},
+    "Sara": {"age": 21, "grade": "B", "city": "Lahore"},
+    "Omar": {"age": 19, "grade": "A", "city": "Islamabad"},
+    "Hina": {"age": 22, "grade": "C", "city": "Faisalabad"}
+}
+student_details.update({
+    "Zara": {"age": 20, "grade": "B", "city": "Multan"}
+})
+student_details.pop("Omar")
+print(student_details)
+EOF
+Q9
+python - <<EOF
+age = int(input("Enter your age: "))
+credit_score = int(input("Enter your credit score: "))
+income = int(input("Enter your annual income: $ "))
+if age < 18:
+    print("You are not eligible for the loan due to age.")
+elif credit_score < 650:
+    print("You are not eligible for the loan due to low credit score.")
+elif credit_score >= 700 and income >= 25000:
+    print("You are eligible for the loan!")
+elif credit_score >= 650 and income >= 30000:
+    print("You are eligible for the loan!")
+else:
+    print("You are not eligible for the loan due to insufficient income.")
+EOF
